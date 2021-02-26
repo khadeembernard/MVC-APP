@@ -9,6 +9,18 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+
+//Set up mongoose connection---- From the MDN
+var mongoose = require('mongoose');
+var dev_db_url = 'mongodb+srv://admin:1234@nec-cluster0.x7crt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+//URI for Mongodb Atlas 
+var mongoDB = process.env.URI || dev_db_url;
+mongoose.Promise = global.Promise;// A Promise based object back for async options to get info
+mongoose.connect(mongoDB, { useNewUrlParser: true , useUnifiedTopology: true});
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
