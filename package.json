@@ -19,5 +19,19 @@
     "mongoose": "^5.11.18",
     "morgan": "~1.9.1",
     "pug": "^2.0.0-beta11"
-  }
+  },
+  "description": "",
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khadeembernard/MVC-APP.git"
+  },
+  "keywords": [],
+  "author": "Bernard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khadeembernard/MVC-APP/issues"
+  },
+  "homepage": "https://github.com/khadeembernard/MVC-APP#readme"
 }
